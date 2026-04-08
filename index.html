@@ -195,14 +195,20 @@ a { text-decoration:none; color:inherit; }
 .g-tab.active-ayuki { background:var(--blue); border-color:var(--blue); color:#fff; }
 .gallery-grid {
   display:grid;
-  grid-template-columns:repeat(3,1fr);
+  grid-template-columns:2fr 1fr 1fr;
   grid-template-rows:300px 300px;
   gap:6px; padding:0 72px;
+}
+.gallery-grid + .gallery-grid {
+  grid-template-columns:2fr 1fr 1fr 1fr;
+  grid-template-rows:280px;
+  margin-top:6px;
 }
 .gi { overflow:hidden; border-radius:18px; position:relative; }
 .gi img { width:100%; height:100%; object-fit:cover; transition:transform .6s ease; }
 .gi:hover img { transform:scale(1.06); }
-.gi:nth-child(1) { grid-column:span 2; }
+.gallery-grid > .gi:nth-child(1) { grid-column:span 2; grid-row:span 2; }
+.gallery-grid + .gallery-grid > .gi:nth-child(1) { grid-column:span 1; grid-row:span 1; }
 .gi-label {
   position:absolute; bottom:0; left:0; right:0;
   padding:14px 18px;
@@ -400,7 +406,7 @@ footer { background:var(--ink); padding:42px 72px; display:flex; justify-content
 <!-- 村上マキ -->
 <section class="stylist-maki" id="maki">
   <div class="s-visual">
-    <img src="style1.png" alt="村上真樹スタイル" loading="lazy">
+    <img src="s11.png" alt="村上真樹スタイル" loading="lazy">
     <div class="v-badge">Stylist 01</div>
   </div>
   <div class="s-copy r d1">
@@ -454,7 +460,7 @@ footer { background:var(--ink); padding:42px 72px; display:flex; justify-content
     <a href="https://beauty.hotpepper.jp/CSP/bt/reserve/?storeId=H000275673&stylistId=T001062333" class="s-btn">相本 歩希を指名して予約 →</a>
   </div>
   <div class="s-visual">
-    <img src="style4.png" alt="相本歩希スタイル" loading="lazy">
+    <img src="s02.png" alt="相本歩希スタイル" loading="lazy">
     <div class="v-badge">Stylist 02</div>
   </div>
 </section>
@@ -466,12 +472,21 @@ footer { background:var(--ink); padding:42px 72px; display:flex; justify-content
     <h2 class="h2">施術スタイルギャラリー</h2>
   </div>
   <div class="gallery-grid">
-    <div class="gi"><img src="style1.png" alt="グレーウェーブボブ" loading="lazy"><div class="gi-label">グレーウェーブボブ</div></div>
-    <div class="gi"><img src="style3.png" alt="グレーボブ" loading="lazy"><div class="gi-label">透明感グレーボブ</div></div>
-    <div class="gi"><img src="style4.png" alt="グレーショート" loading="lazy"><div class="gi-label">グレーショート</div></div>
-    <div class="gi"><img src="style2.png" alt="ダークブラウン" loading="lazy"><div class="gi-label">ナチュラルブラウン</div></div>
-    <div class="gi"><img src="hair1.png" alt="ボブ" loading="lazy"><div class="gi-label">ナチュラルボブ</div></div>
-    <div class="gi"><img src="hair2.png" alt="ミディアム" loading="lazy"><div class="gi-label">ミディアムカラー</div></div>
+    <div class="gi"><img src="s09.png" alt="フラワーフィールドスタイル" loading="lazy"><div class="gi-label">ナチュラルミディアム</div></div>
+    <div class="gi"><img src="s02.png" alt="グレーウェーブボブ" loading="lazy"><div class="gi-label">グレーウェーブボブ</div></div>
+    <div class="gi"><img src="s05.png" alt="ブラウンミディアム" loading="lazy"><div class="gi-label">ブラウンミディアム</div></div>
+    <div class="gi"><img src="s01.png" alt="ダークブラウンロング" loading="lazy"><div class="gi-label">ダークブラウンロング</div></div>
+    <div class="gi"><img src="s04.png" alt="ブラウンボブ" loading="lazy"><div class="gi-label">ナチュラルボブ</div></div>
+    <div class="gi"><img src="s03.png" alt="グレーショート" loading="lazy"><div class="gi-label">グレーショート</div></div>
+  </div>
+
+  <!-- 2段目ギャラリー -->
+  <div class="gallery-grid" style="margin-top:6px">
+    <div class="gi"><img src="s10.png" alt="フラワーミディアム" loading="lazy"><div class="gi-label">ソフトミディアム</div></div>
+    <div class="gi"><img src="s07.png" alt="ロングレイヤー" loading="lazy"><div class="gi-label">ロングレイヤー</div></div>
+    <div class="gi"><img src="s08.png" alt="ショートボブ" loading="lazy"><div class="gi-label">ショートボブ</div></div>
+    <div class="gi"><img src="s11.png" alt="ウェービーボブ" loading="lazy"><div class="gi-label">ウェービーボブ</div></div>
+    <div class="gi"><img src="s06.png" alt="ナチュラルロング" loading="lazy"><div class="gi-label">ナチュラルロング</div></div>
   </div>
 </section>
 
